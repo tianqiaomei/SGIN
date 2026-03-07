@@ -6,12 +6,12 @@ services:
     ports:
       - "8000:8000" # 暴露web端口
     volumes:
-      - ./best-icr-mango.pt:/app/best-icr-mango.pt # 挂载mango模型
-      - ./best-icr-VisDrone.pt:/app/best-icr-VisDrone.pt # 挂载remote模型
+      - ./best-mango.pt:/app/best-mango.pt # 挂载mango模型
+      - ./best-VisDrone.pt:/app/best-VisDrone.pt # 挂载remote模型
       - ./outputs:/app/outputs # 挂载输出目录
     environment:
-      - MANGO_MODEL_PATH=/app/best-icr-mango.pt
-      - REMOTE_MODEL_PATH=/app/best-icr-VisDrone.pt
+      - MANGO_MODEL_PATH=/app/best-mango.pt
+      - REMOTE_MODEL_PATH=/app/best-VisDrone.pt
       - SAVE_DIR=/app/outputs
       - CONF_THRESHOLD=0.25
     # 下面是关键配置：启用 MPTCP 支持
