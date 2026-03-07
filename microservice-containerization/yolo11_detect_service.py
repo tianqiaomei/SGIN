@@ -17,8 +17,8 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print(f"使用设备: {device.upper()}")
 
 # ==================== 配置 ====================
-MANGO_MODEL_PATH = os.environ.get("MANGO_MODEL_PATH", "/app/best-icr-mango.pt")
-REMOTE_MODEL_PATH = os.environ.get("REMOTE_MODEL_PATH", "/app/best-icr-VisDrone.pt")
+MANGO_MODEL_PATH = os.environ.get("MANGO_MODEL_PATH", "/app/best-mango.pt")
+REMOTE_MODEL_PATH = os.environ.get("REMOTE_MODEL_PATH", "/app/best-VisDrone.pt")
 SAVE_DIR = os.environ.get("SAVE_DIR", "/app/outputs")
 CONF_THRESHOLD = float(os.environ.get("CONF_THRESHOLD", 0.25))
 
