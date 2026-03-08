@@ -18,6 +18,8 @@ https://pan.baidu.com/s/17qmAB5kGHQnWJSCrg1Ae-w?pwd=s73u
 
 cd SGIN-26vdi
 
+python3 topology-create.py
+ 
 chmod +x run-SGIN.sh
 
 ./run-SGIN.sh
